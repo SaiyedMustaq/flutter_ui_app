@@ -35,19 +35,11 @@ class _DataTableTabViewState extends State<DataTableTabView>
       ),
       body: TabBarView(
         children: <Widget>[
-          FirstTab(
-            tabTitla: 'Sortable',
-          ),
+          FirstTab(title: ""),
           SecondTab(
             title: "Page Two",
           ),
-          ThirdTab(
-            title: "Page Three",
-          )
         ],
-// if you want yo disable swiping in tab the use below code
-//            physics: NeverScrollableScrollPhysics(),
-        controller: _tabController,
       ),
       // bottomNavigationBar: Material(
       //   color: Colors.purple,
@@ -91,8 +83,8 @@ class _DataTableTabViewState extends State<DataTableTabView>
 }
 
 class FirstTab extends StatefulWidget {
-  final String tabTitla;
-  FirstTab({this.tabTitla});
+  final String title;
+  FirstTab({this.title});
   @override
   FirstTabState createState() => FirstTabState();
 }

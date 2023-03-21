@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_app/pagination/Pagination.dart';
-import 'package:flutter_ui_app/plantapp/plant_home_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import 'data_table/data_table_home.dart';
+import 'musicapp/music_main.dart';
+import 'plantapp/plant_home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter UI',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: DataTableTabView(title: 'Flutter Data Table'),
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: GoogleFonts.saralaTextTheme(Theme.of(context).textTheme)),
+      home: MusicMain(),
     );
   }
 }
@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          RaisedButton(
+          TextButton(
             onPressed: () {
               Navigator.push(
                 context,
@@ -52,25 +52,18 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             child: Text('Plant App '),
           ),
-          RaisedButton(
-            color: Colors.red,
-            colorBrightness: Brightness.dark,
-            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+          TextButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => PaginationHome()));
+                  MaterialPageRoute(builder: (context) => MusicMain()));
             },
-            child: Text('Pagination'),
+            child: Text('Music App'),
           ),
-          RaisedButton(
-            onPressed: () {},
-            child: Text('UI 3'),
-          ),
-          RaisedButton(
+          TextButton(
             onPressed: () {},
             child: Text('UI 4'),
           ),
-          RaisedButton(
+          TextButton(
             onPressed: () {},
             child: Text('UI 5'),
           ),

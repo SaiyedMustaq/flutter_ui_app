@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_app/plantapp/plant_constant.dart';
+
+import 'plant_constant.dart';
 
 class TitleWithMoreButton extends StatelessWidget {
   const TitleWithMoreButton({
@@ -20,10 +21,7 @@ class TitleWithMoreButton extends StatelessWidget {
             title: title,
           ),
           Spacer(),
-          FlatButton(
-            color: kPrimaryColor,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          TextButton(
             onPressed: morePress,
             child: Text(
               'More',
