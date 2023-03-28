@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_app/plantapp/details/title_and_price.dart';
-import 'package:flutter_ui_app/plantapp/plant_constant.dart';
 
+import '../plant_constant.dart';
 import 'image_with_left_menu.dart';
+import 'title_and_price.dart';
 
 class DetailsBody extends StatelessWidget {
   @override
@@ -21,10 +21,7 @@ class DetailsBody extends StatelessWidget {
               SizedBox(
                 width: size.width / 2,
                 height: 60,
-                child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.only(topRight: Radius.circular(20))),
+                child: TextButton(
                   onPressed: () {},
                   child: Text(
                     'Buy',
@@ -33,11 +30,10 @@ class DetailsBody extends StatelessWidget {
                         .headline6
                         .copyWith(color: Colors.white, fontSize: 18),
                   ),
-                  color: kPrimaryColor,
                 ),
               ),
               Expanded(
-                child: FlatButton(
+                child: TextButton(
                   onPressed: () {},
                   child: Text(
                     'Descreption',
